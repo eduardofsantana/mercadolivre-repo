@@ -11,8 +11,8 @@ Este projeto é um exercício prático focado na recriação da interface princi
 * **Instituição:** IFPE - Campus Jaboatão
 * **Curso:** Análise e Desenvolvimento de Sistemas (ADS)
 * **Disciplina:** Programação Web 2
-* **Professor:** Josino Neto
-* **Desenvolvedores:** Eduardo Felipe e Cauã Lopes
+* **Docente:** Josino Neto
+* **Discentes:** Eduardo Felipe e Cauã Lopes
 
 ## Objetivo do Projeto
 
@@ -27,7 +27,7 @@ O objetivo principal desta atividade foi aplicar os conceitos de estruturação 
   * Variáveis CSS (Custom Properties) para padronização de paleta de cores e espaçamentos.
   * Design Responsivo (Media Queries) para adaptação a dispositivos móveis.
 
-## 🤖 Uso de Inteligência Artificial
+## Uso de Inteligência Artificial
 
 Para manter a transparência exigida no ambiente acadêmico, declaramos que ferramentas de Inteligência Artificial Generativa foram utilizadas durante o processo de desenvolvimento como um "pair programmer" assistente. A IA foi empregada para:
 
