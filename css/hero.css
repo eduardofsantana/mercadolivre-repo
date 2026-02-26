@@ -1,0 +1,99 @@
+/* ===== HERO BANNER ===== */
+
+.hero {
+  /* Aplicação de gradiente linear para composição visual do background da seção principal */
+  background: linear-gradient(to right, #2176FF, #00C853);
+  padding: 50px 30px;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* ===== TEXTO DO HERO ===== */
+.hero-text {
+  flex: 1;
+  color: white;
+}
+
+.hero-title {
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  /* text-shadow aplicado para melhorar a legibilidade do texto sobre o fundo colorido */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+/* ===== BOTÃO CTA (Call to Action) ===== */
+.hero-btn {
+  display: inline-block;
+  background-color: #FFE135;
+  color: #333333;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 14px 32px;
+  border-radius: var(--border-radius-btn);
+  /* A borda sólida contrasta com o fundo, guiando a atenção do usuário para a ação principal */
+  border: 3px solid #000000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn:hover {
+  background-color: #FFD000;
+  /* Propriedade transform utilizada para criar microinteração de escala no hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== IMAGEM DO HERO ===== */
+.hero-image {
+  flex-shrink: 0;
+}
+
+.hero-img {
+  width: 500px;
+  height: 320px;
+  /* object-fit: cover garante que a imagem preencha as dimensões sem distorcer a proporção (aspect ratio) */
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .hero-content {
+    /* Alteração da direção do eixo principal do flexbox para empilhar elementos no mobile */
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 200px;
+  }
+}

@@ -1,0 +1,41 @@
+/* ===== VARIÁVEIS CSS (CUSTOM PROPERTIES) ===== */
+/* Centralização de valores repetitivos para facilitar a manutenção e escalabilidade do projeto. */
+
+:root {
+  /* === PALETA DE CORES === */
+  --color-amarelo: #FFE135; /* Cor primária da marca */
+  --color-azul: #2176FF;    /* Cor de destaque e links */
+  --color-verde: #00C853;   /* Feedback positivo e tags de frete */
+  --color-fundo: #f0f0f0;   /* Background geral do layout */
+
+  /* Cores tipográficas */
+  --color-texto: #333333;
+  --color-texto-claro: #666666;
+  
+  /* Cor do rodapé */
+  --color-footer: #222222;
+
+  /* === ARREDONDAMENTO DE BORDAS (BORDER-RADIUS) === */
+  --border-radius-card: 15px;
+  --border-radius-input: 50px;
+  --border-radius-btn: 8px;
+
+  /* === SOMBRAS (BOX-SHADOW) === */
+  /* Utilizadas para criar noção de profundidade e hierarquia visual (Elevação) */
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.30);
+
+  /* === SISTEMA DE ESPAÇAMENTO === */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+}
+
+/* Adaptação das variáveis de espaçamento para telas menores */
+@media (max-width: 768px) {
+  :root {
+    --spacing-xl: 20px;
+    --spacing-lg: 16px;
+  }
+}

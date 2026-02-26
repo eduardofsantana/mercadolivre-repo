@@ -1,0 +1,151 @@
+/* ===== GRADE DE PRODUTOS ===== */
+
+.products {
+  padding: 40px 30px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.products-container {
+  width: 100%;
+}
+
+/* ===== TÍTULO DA SEÇÃO ===== */
+.products-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-texto);
+  margin-bottom: 24px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.products-title-sub {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--color-texto-claro);
+}
+
+/* ===== CONFIGURAÇÃO DO CSS GRID ===== */
+.products-grid {
+  display: grid;
+  /* grid-template-columns divide o container em 4 colunas de larguras iguais (frações) */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ===== CARD DO PRODUTO ===== */
+.product-card {
+  background-color: white;
+  border-radius: var(--border-radius-card);
+  border: 1px solid #cccccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  /* overflow: hidden garante que a imagem do card não vaze além das bordas arredondadas do container pai */
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-card);
+  /* Efeito de elevação utilizando transform para melhorar a experiência do usuário (UX) */
+  transform: scale(1.05);
+  /* z-index ajustado no estado hover para que o elemento em evidência não seja ocultado por elementos adjacentes */
+  z-index: 1;
+  position: relative;
+}
+
+.card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== IMAGEM DO CARD ===== */
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #eeeeee;
+}
+
+/* ===== INFORMAÇÕES DO PRODUTO ===== */
+.card-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ===== NOME DO PRODUTO ===== */
+.card-name {
+  font-size: 14px;
+  color: var(--color-texto);
+  line-height: 1.4;
+  /* Utilização da propriedade -webkit-box para truncamento de texto multilinhas.
+     Isso garante que os títulos limitem-se a 2 linhas e mantenham a altura dos cards uniforme. */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===== PRECIFICAÇÃO ===== */
+.card-price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card-old-price {
+  font-size: 13px;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.card-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-texto);
+}
+
+.card-installment {
+  font-size: 13px;
+  color: var(--color-verde);
+}
+
+/* ===== TAG FRETE GRÁTIS ===== */
+.card-tag-full {
+  display: inline-block;
+  background-color: var(--color-verde);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  /* align-self aplicado para que a tag ocupe apenas a largura necessária em relação ao fluxo do flex container */
+  align-self: flex-start;
+}
+
+.card-tag-full i {
+  font-size: 11px;
+  margin-right: 3px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .products {
+    padding: 20px 15px;
+  }
+
+  .products-grid {
+    /* Reajusta a grade para exibir 2 colunas em dispositivos de tela menor */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .card-price {
+    font-size: 18px;
+  }
+
+  .products-title {
+    font-size: 20px;
+  }
+}

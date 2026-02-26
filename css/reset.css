@@ -1,0 +1,52 @@
+/* ===== RESET CSS ===== */
+/* Normalização das propriedades nativas dos navegadores (User Agent Stylesheet) 
+   para garantir consistência de renderização cross-browser. */
+
+* {
+  margin: 0;
+  padding: 0;
+  /* Aplicação de border-box para que padding e border sejam incluídos no cálculo da largura total dos elementos */
+  box-sizing: border-box;
+}
+
+html {
+  /* Habilita rolagem suave nativa para âncoras internas */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333333;
+  line-height: 1.5;
+}
+
+ul {
+  /* Remove a estilização padrão de listas */
+  list-style: none;
+}
+
+a {
+  /* Remove sublinhado padrão dos hiperlinks */
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  /* Garante que imagens sejam responsivas por padrão e não ultrapassem seus containers */
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Media Query para ajuste global de tipografia em dispositivos móveis */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}

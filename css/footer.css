@@ -1,0 +1,77 @@
+/* ===== FOOTER ===== */
+
+.footer {
+  background-color: var(--color-footer);
+  color: #aaaaaa;
+  padding: 50px 30px 20px;
+  margin-top: 20px;
+}
+
+/* ===== ESTRUTURAÇÃO COM CSS GRID ===== */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* Definição de 3 colunas fracionais iguais para organizar os grupos de links do rodapé */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #444444;
+}
+
+/* ===== COLUNAS DO FOOTER ===== */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ===== LINKS DO FOOTER ===== */
+.footer-link {
+  font-size: 13px;
+  color: #aaaaaa;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ===== COPYRIGHT ===== */
+.footer-bottom {
+  padding-top: 25px;
+  /* Centralização textual tradicional aplicada diretamente no bloco, dispensando o uso de flexbox para este caso específico */
+  text-align: center;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #777777;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px 20px;
+  }
+
+  .footer-container {
+    /* Modifica a disposição da malha (grid) para uma única coluna (1fr) em layouts verticais (mobile) */
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
